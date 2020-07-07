@@ -1,0 +1,18 @@
+<resources>
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+    <style name="errorToast">
+        <item name="stColorBackground">#ff5e64</item>
+        <item name="stTextColor">#fff6f6</item>
+        <item name="stStrokeColor">#000</item>
+        <item name="stStrokeWidth">3dp</item>
+        <item name="fontFamily">@font/luginafplight</item>
+        <item name="stLength">SHORT</item>
+        <item name="cornerRadius">3dp</item>
+    </style>
+</resources>

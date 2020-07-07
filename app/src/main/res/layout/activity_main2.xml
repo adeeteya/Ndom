@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimaryDark"
+    android:orientation="vertical"
+    android:weightSum="1"
+    tools:context=".MainActivity2">
+    <include
+        layout="@layout/toolbar"
+        android:id="@+id/toolbar_random"
+        />
+    <TextView
+        android:id="@+id/numberView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="108dp"
+        android:layout_marginLeft="108dp"
+        android:layout_marginTop="108dp"
+        android:layout_marginEnd="108dp"
+        android:layout_marginRight="108dp"
+        android:layout_weight="0.8"
+        android:gravity="center"
+        android:textColor="@color/colorDarkBlue"
+        android:textSize="48sp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.1"
+        android:orientation="vertical"
+        android:weightSum="2">
+
+        <EditText
+            android:id="@+id/minEditText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="32dp"
+            android:layout_weight="1"
+            android:hint="Enter Minimum Value"
+            android:inputType="numberDecimal"
+            android:textColor="@color/colorDarkBlue"
+            android:textColorHint="@color/colorDarkBlue" />
+
+        <EditText
+            android:id="@+id/maxEditText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginLeft="16dp"
+            android:layout_weight="1"
+            android:hint="Enter Minimum Value"
+            android:inputType="numberDecimal"
+            android:textColor="@color/colorDarkBlue"
+            android:textColorHint="@color/colorDarkBlue" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_weight="0.1">
+        <Button
+            android:id="@+id/submitButton"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="Generate"
+            android:background="@color/colorPrimaryDark"
+            android:textColor="@color/colorDarkBlue"/>
+
+    </LinearLayout>
+
+</LinearLayout>
