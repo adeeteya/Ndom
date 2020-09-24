@@ -3,11 +3,10 @@
     <color name="colorPrimary">#6200EE</color>
     <color name="colorPrimaryDark">#070024</color>
     <color name="colorDarkGrey">#121212</color>
-    <color name="colorDarkGreyPrimary">#1F1B24</color>
     <color name="colorPrimaryPurple">#BB86FC</color>
-    <color name="colorPurple700">#3700B3</color>
     <color name="colorSecondaryTeal">#03DAC5</color>
     <color name="colorDarkBlue">#046ef1</color>
     <color name="colorBrightOrange">#ec4c1c</color>
+    <color name="colorHintGrey">#808080</color>
     <color name="colorAccent">#046ef1</color>
 </resources>

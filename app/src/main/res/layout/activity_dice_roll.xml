@@ -8,7 +8,10 @@
     android:orientation="vertical"
     tools:context=".DiceRollActivity"
     android:weightSum="1">
-
+    <include
+        layout="@layout/toolbar"
+        android:id="@+id/diceRollToolbar"
+        />
 
     <ImageView
         android:id="@+id/diceImageView"

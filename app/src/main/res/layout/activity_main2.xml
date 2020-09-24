@@ -10,7 +10,7 @@
     tools:context=".MainActivity2">
     <include
         layout="@layout/toolbar"
-        android:id="@+id/toolbar_random"
+        android:id="@+id/randomNoToolbar"
         />
     <TextView
         android:id="@+id/numberView"

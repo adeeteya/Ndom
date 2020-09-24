@@ -11,6 +11,7 @@ import android.hardware.SensorEventListener;
 import android.hardware.SensorManager;
 import android.os.Bundle;
 import android.view.Gravity;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -27,8 +28,10 @@ public class MainActivity2 extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main2);
-        Toolbar toolbar=findViewById(R.id.toolbar_random);
+        Toolbar toolbar=findViewById(R.id.randomNoToolbar);
         setSupportActionBar(toolbar);
+        getSupportActionBar().setTitle("Generate Random Number");
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         minEditText=findViewById(R.id.minEditText);
         maxEditText=findViewById(R.id.maxEditText);
         submitButton=findViewById(R.id.submitButton);
@@ -73,5 +76,19 @@ public class MainActivity2 extends AppCompatActivity {
                 }
             }
         });
+    }
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId()) {
+            case android.R.id.home:
+                finish();
+                return true;
+        }
+        return super.onOptionsItemSelected(item);
+    }
+    @Override
+    public void finish() {
+        super.finish();
+        overridePendingTransition(R.anim.slide_in_right,R.anim.slide_out_left);
     }
 }

@@ -13,8 +13,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".randomColor"></activity>
-        <activity android:name=".CoinFlip" />
+        <activity android:name=".randomColor" android:parentActivityName=".MainActivity"></activity>
+        <activity android:name=".CoinFlip" android:parentActivityName=".MainActivity"/>
         <activity
             android:name=".DiceRollActivity"
             android:parentActivityName=".MainActivity" />

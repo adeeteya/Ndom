@@ -1,6 +1,7 @@
 package com.aditya.ndom;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
 
 import android.content.Context;
 import android.hardware.Sensor;
@@ -10,6 +11,7 @@ import android.hardware.SensorManager;
 import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.os.Handler;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
@@ -26,6 +28,10 @@ public class DiceRollActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_dice_roll);
+        Toolbar toolbar=findViewById(R.id.diceRollToolbar);
+        setSupportActionBar(toolbar);
+        getSupportActionBar().setTitle("Dice Roll");
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         sm=(SensorManager) getSystemService(Context.SENSOR_SERVICE);
         sm.registerListener(sensorListener,sm.getDefaultSensor(Sensor.TYPE_ACCELEROMETER),SensorManager.SENSOR_DELAY_NORMAL);
         acelVal=SensorManager.GRAVITY_EARTH;
@@ -78,5 +84,19 @@ public class DiceRollActivity extends AppCompatActivity {
             case 5:diceImageView.setImageResource(R.drawable.dice_5);break;
             case 6:diceImageView.setImageResource(R.drawable.dice_6);break;
         }
+    }
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId()) {
+            case android.R.id.home:
+                finish();
+                return true;
+        }
+        return super.onOptionsItemSelected(item);
+    }
+    @Override
+    public void finish() {
+        super.finish();
+        overridePendingTransition(R.anim.slide_in_left,R.anim.slide_out_right);
     }
 }

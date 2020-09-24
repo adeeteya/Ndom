@@ -1,9 +1,11 @@
 package com.aditya.ndom;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
 
 import android.media.MediaPlayer;
 import android.os.Bundle;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
@@ -20,6 +22,10 @@ public class CoinFlip extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_coin_flip);
+        Toolbar toolbar=findViewById(R.id.coinFlipToolbar);
+        setSupportActionBar(toolbar);
+        getSupportActionBar().setTitle("Coin Flip");
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         flipButton=findViewById(R.id.flipButton);
         coinView=findViewById(R.id.coinView);
         final MediaPlayer tossSound=MediaPlayer.create(CoinFlip.this,R.raw.coin_flip);
@@ -47,5 +53,19 @@ public class CoinFlip extends AppCompatActivity {
                 coinView.startAnimation(animation);
             }
         });
+    }
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId()) {
+            case android.R.id.home:
+                finish();
+                return true;
+        }
+        return super.onOptionsItemSelected(item);
+    }
+    @Override
+    public void finish() {
+        super.finish();
+        overridePendingTransition(R.anim.slide_in_right,R.anim.slide_out_left);
     }
 }

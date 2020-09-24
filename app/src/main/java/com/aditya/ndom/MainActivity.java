@@ -30,6 +30,7 @@ public class MainActivity extends AppCompatActivity {
                 menuSound.start();
                 Intent intent=new Intent(MainActivity.this,MainActivity2.class);
                 startActivity(intent);
+                overridePendingTransition(R.anim.slide_in_left,R.anim.slide_out_right);
             }
         });
         imageButton2.setOnClickListener(new View.OnClickListener() {
@@ -38,6 +39,7 @@ public class MainActivity extends AppCompatActivity {
                 menuSound.start();
                 Intent intent=new Intent(MainActivity.this,DiceRollActivity.class);
                 startActivity(intent);
+                overridePendingTransition(R.anim.slide_in_right,R.anim.slide_out_left);
             }
         });
         imageButton3.setOnClickListener(new View.OnClickListener() {
@@ -46,6 +48,7 @@ public class MainActivity extends AppCompatActivity {
                 menuSound.start();
                 Intent intent=new Intent(MainActivity.this,CoinFlip.class);
                 startActivity(intent);
+                overridePendingTransition(R.anim.slide_in_left,R.anim.slide_out_right);
             }
         });
         imageButton4.setOnClickListener(new View.OnClickListener() {
@@ -54,6 +57,7 @@ public class MainActivity extends AppCompatActivity {
                 menuSound.start();
                 Intent intent=new Intent(MainActivity.this,randomColor.class);
                 startActivity(intent);
+                overridePendingTransition(R.anim.slide_in_right,R.anim.slide_out_left);
             }
         });
     }

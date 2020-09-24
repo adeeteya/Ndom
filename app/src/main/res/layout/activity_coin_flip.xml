@@ -6,7 +6,9 @@
     android:layout_height="match_parent"
     android:background="@color/colorDarkGrey"
     tools:context=".CoinFlip">
-
+    <include
+        layout="@layout/toolbar"
+        android:id="@+id/coinFlipToolbar"/>
     <ImageView
         android:id="@+id/coinView"
         android:layout_width="200dp"
@@ -23,11 +25,12 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="32dp"
-        android:background="@color/colorDarkGrey"
-        android:elevation="10dp"
+        android:background="@drawable/mybutton"
+        android:elevation="6dp"
         android:fontFamily="monospace"
+        android:textAllCaps="false"
         android:text="Flip"
-        android:textColor="#FFFFFF"
+        android:textColor="@color/colorDarkGrey"
         android:textSize="36sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
