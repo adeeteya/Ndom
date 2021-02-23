@@ -1,30 +1,36 @@
 package com.aditya.ndom;
 
+import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
+import androidx.cardview.widget.CardView;
 
+import android.app.Activity;
 import android.content.Intent;
+import android.graphics.Color;
 import android.media.MediaPlayer;
+import android.os.Build;
 import android.os.Bundle;
 import android.provider.MediaStore;
 import android.view.View;
+import android.view.Window;
+import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.ImageButton;
 
 public class MainActivity extends AppCompatActivity {
-    private ImageButton imageButton1,imageButton2,imageButton3,imageButton4;
+    private CardView cardView1,cardView2,cardView3,cardView4;
+    @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        Toolbar toolbar=findViewById(R.id.toolbar);
-        setSupportActionBar(toolbar);
         final MediaPlayer menuSound= MediaPlayer.create(MainActivity.this,R.raw.menu_select);
-        imageButton1=findViewById(R.id.imageButton1);
-        imageButton2=findViewById(R.id.imageButton2);
-        imageButton3=findViewById(R.id.imageButton3);
-        imageButton4=findViewById(R.id.imageButton4);
-        imageButton1.setOnClickListener(new View.OnClickListener() {
+        cardView1=findViewById(R.id.cardView1);
+        cardView2=findViewById(R.id.cardView2);
+        cardView3=findViewById(R.id.cardView3);
+        cardView4=findViewById(R.id.cardView4);
+        cardView1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 menuSound.start();
@@ -33,7 +39,7 @@ public class MainActivity extends AppCompatActivity {
                 overridePendingTransition(R.anim.slide_in_left,R.anim.slide_out_right);
             }
         });
-        imageButton2.setOnClickListener(new View.OnClickListener() {
+        cardView2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 menuSound.start();
@@ -42,7 +48,7 @@ public class MainActivity extends AppCompatActivity {
                 overridePendingTransition(R.anim.slide_in_right,R.anim.slide_out_left);
             }
         });
-        imageButton3.setOnClickListener(new View.OnClickListener() {
+        cardView3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 menuSound.start();
@@ -51,7 +57,7 @@ public class MainActivity extends AppCompatActivity {
                 overridePendingTransition(R.anim.slide_in_left,R.anim.slide_out_right);
             }
         });
-        imageButton4.setOnClickListener(new View.OnClickListener() {
+        cardView4.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 menuSound.start();

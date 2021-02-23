@@ -4,9 +4,10 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/colorPrimaryDark"
+    android:background="@drawable/gradient_bg_2"
     android:orientation="vertical"
     tools:context=".DiceRollActivity"
+    android:fitsSystemWindows="true"
     android:weightSum="1">
     <include
         layout="@layout/toolbar"
@@ -26,8 +27,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Roll Dice!"
-        android:background="@color/colorPrimaryDark"
-        android:textColor="@color/colorDarkBlue"
+        android:background="@android:color/transparent"
+        android:textColor="@color/white"
         android:textSize="18dp"
         android:layout_weight="0.1"/>
 </LinearLayout>
